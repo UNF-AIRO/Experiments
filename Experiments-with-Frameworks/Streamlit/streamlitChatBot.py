@@ -1,7 +1,7 @@
 import streamlit as st
 from pydantic import BaseModel
 from typing import List
-
+import os
 # Message class defined in Pydantic
 class Message(BaseModel):
     isAi: bool
@@ -10,8 +10,8 @@ class Message(BaseModel):
 st.set_page_config(page_title='AiRO', page_icon='./AiRO.png')
 
 def local_css(file_name):
-    f = open(file_name, "r")
-    if f:
+    with open(os.path.join(file_name)) as f:
+    
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 local_css("style.css")
