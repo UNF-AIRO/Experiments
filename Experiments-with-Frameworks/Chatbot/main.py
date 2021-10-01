@@ -1,4 +1,4 @@
-
+import pickle
 import chatbot as cb
 from keras.models import load_model
 model = load_model('chatbot_model.h5')
