@@ -1,43 +1,43 @@
+# Import frameworks
 import pickle
 import chatbot as cb
 from keras.models import load_model
-model = load_model('chatbot_model.h5')
+
 import json
 import random
 import nltk
+import streamlit as st
+from pydantic import BaseModel
+from typing import List
+# Downloads needed nltk
 nltk.download('punkt')
 nltk.download('wordnet')
+
+# Loads needed files
+model = load_model('chatbot_model.h5')
 intents = json.loads(open('intents.json').read())
 words = pickle.load(open('words.pkl','rb'))
 classes = pickle.load(open('classes.pkl','rb'))
 
-def send(msg):
-   
 
-    if msg != '':
-       
-        res = cb.chatbot_response(msg)
-        return res
 
-import streamlit as st
-from pydantic import BaseModel
-from typing import List
-import os
+
 # Message class defined in Pydantic
 class Message(BaseModel):
     isAi: bool
     text: str
 
-message = Message(isAi=False, text= "")
+# Sets page config for the streamlit page
 st.set_page_config(page_title='AiRO', page_icon='🧠', layout="wide")
 
 def local_css():
    with open("style.css") as f:
-    
+       # Customizes the CSS
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-
+# Loads Custom CSS
 local_css()
 
+# Intializes the state variables (the vars that are persistant)
 if 'count' not in st.session_state:
 	st.session_state.count = 0
 
@@ -45,32 +45,47 @@ if 'messages' not in st.session_state:
 	st.session_state.messages = list()
 
 def chatBubble(message):
-    col1, col2, col3 = st.columns(3)
+    # Initalize columns so the messages are at opposite sides of the page
+    col1, col2 = st.columns(2)
     if message.isAi:
-        with col1:
+         with col1:
+            # Html bubble message
             st.markdown(f'<div class="chat"><div class="yours messages"><div class="message last">{message.text}</div></div> <div class="yours messages">', unsafe_allow_html=True)
     else:
-        with col2:
+         with col2:
+             # Html bubble message
             st.markdown(f'<div class="chat"><div class="mine messages"><div class="message last">{message.text}</div></div> <div class="mine messages">', unsafe_allow_html=True)
-
+# Image on top
 st.image("AiRO.png")
+
+# Title below image
 st.title("Artificial Intelligence Research Organization")
 
+# Subheader below title
 st.subheader("Chat about UNF...")
 
+# Initalize button
 start = st.button("Chat")
 
+# If start then add to count state var, is a count so that when the page updates, the chat still appears
 if start:
     st.session_state.count += 1
 if  st.session_state.count > 0:
     
+    # Set newMessage to a text field
     newMessage = st.text_input("Send Message")
+
+    # Initalize button
     send = st.button("Send")
+
+    # If send, send the message and process the text for the chatbot
     if send:
         message = Message(isAi=False, text= newMessage)
         st.session_state.messages.append(message)
         aiMessage = Message(isAi=True, text=cb.chatbot_response(newMessage))
         st.session_state.messages.append(aiMessage)
+
+    # Display the chat bubbles
     for message in st.session_state.messages:
         chatBubble(message)
        
