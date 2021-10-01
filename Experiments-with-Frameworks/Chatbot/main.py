@@ -69,8 +69,9 @@ if  st.session_state.count > 0:
     if send:
         message = Message(isAi=False, text= newMessage)
         st.session_state.messages.append(message)
-
+        aiMessage = Message(isAi=True, text=cb.chatbot_response(newMessage))
+        st.session_state.messages.append(aiMessage)
     for message in st.session_state.messages:
         chatBubble(message)
-        aiMessage = Message(isAi=True, text=cb.chatbot_response(newMessage))
-        chatBubble(aiMessage)
+       
+    
