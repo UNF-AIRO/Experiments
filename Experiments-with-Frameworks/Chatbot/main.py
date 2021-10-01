@@ -68,7 +68,7 @@ if  st.session_state.count > 0:
     send = st.button("Send")
     if send:
         message = Message(isAi=False, text= newMessage)
-        st.session_state.messages.insert(0, message)
+        st.session_state.messages.append(message)
 
     for message in st.session_state.messages:
         chatBubble(message)
