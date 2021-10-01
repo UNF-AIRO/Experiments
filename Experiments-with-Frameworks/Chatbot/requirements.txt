@@ -4,3 +4,4 @@ fastapi
 nltk
 numpy
 tensorflow
+pickle5
