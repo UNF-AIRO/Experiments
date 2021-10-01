@@ -11,7 +11,8 @@ st.set_page_config(page_title='AiRO', page_icon='./AiRO.png')
 
 def local_css(file_name):
     f = open(file_name, "r")
-    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+    if f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 local_css("style.css")
 if 'count' not in st.session_state:
