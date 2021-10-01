@@ -6,6 +6,7 @@ import json
 import random
 import nltk
 nltk.download('punkt')
+nltk.download('wordnet')
 intents = json.loads(open('intents.json').read())
 words = pickle.load(open('words.pkl','rb'))
 classes = pickle.load(open('classes.pkl','rb'))
