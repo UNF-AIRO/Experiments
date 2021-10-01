@@ -5,3 +5,4 @@ nltk
 numpy
 tensorflow
 pickle5
+fastapi
