@@ -30,7 +30,7 @@ def chatBubble(message):
         with col2:
                   st.markdown(f'<div class="chat"><div class="mine messages"><div class="message last">{message.text}</div></div> <div class="mine messages">', unsafe_allow_html=True)
 
-st.image("./AiRO.png")
+st.image("AiRO.png")
 st.title("Artificial Intelligence Research Organization")
 
 st.subheader("Chat about UNF...")
