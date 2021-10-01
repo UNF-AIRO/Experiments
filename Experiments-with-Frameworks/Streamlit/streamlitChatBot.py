@@ -9,12 +9,12 @@ class Message(BaseModel):
 
 st.set_page_config(page_title='AiRO', page_icon='./AiRO.png')
 
-def local_css(file_name):
-    with open(os.path.join(file_name)) as f:
+def local_css():
+   with open("style.css") as f:
     
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-local_css("style.css")
+
 if 'count' not in st.session_state:
 	st.session_state.count = 0
 
@@ -51,3 +51,4 @@ if  st.session_state.count > 0:
 
     
 
+local_css()
