@@ -16,3 +16,19 @@ cd Streamlit
 streamlit run main.py
 </details>
 
+
+
+<details>
+<summary>Django</summary>
+<br>
+<b>Requirements: Ubuntu 20.04</b>
+
+sudo apt install python3-django
+
+cd Experiments-with-Frameworks
+
+cd Django
+
+[To be updated soon]
+</details>
+
