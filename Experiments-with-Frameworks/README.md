@@ -29,14 +29,6 @@ In this folder, we experimented with bunch of frameworks listed here.
 
 ``cd Django```
 
-**cd into directory that has the "manage.py' file**
 
-**[SOURCE:]** [https://stackoverflow.com/questions/54263679/do-django-is-needed-for-every-virtual-environment]
-
-```python3 manage.py migrate```  
-
-**This will run the file globally instead of the virtualenv**
-
-```python3 manage.py runserver```
 </details>
 
