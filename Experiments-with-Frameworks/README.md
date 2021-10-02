@@ -16,18 +16,3 @@ cd Streamlit
 streamlit run main.py
 </details>
 
-
-
-<details>
-<summary>Django</summary>
-<br>
-
-  
-sudo apt install python3-django
-
-cd Experiments-with-Frameworks
-
-cd Streamlit 
-
-streamlit run main.py
-</details>
