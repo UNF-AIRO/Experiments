@@ -29,6 +29,9 @@ cd Experiments-with-Frameworks
 
 cd Django
 
-[To be updated soon]
+** cd into directory that has the "manage.py" file **
+python3 manage.py migrate 
+
+
 </details>
 
