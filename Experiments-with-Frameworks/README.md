@@ -30,8 +30,7 @@ cd Experiments-with-Frameworks
 cd Django
 
 ** cd into directory that has the "manage.py" file **
-python3 manage.py migrate 
-
-
+python3 manage.py migrate  ** This will run the file globally instead of the virtualenv **
+python3 manage.py runserver
 </details>
 
