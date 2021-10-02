@@ -1,6 +1,9 @@
-<h1 align="center">Experiments</h1>
+<h1 align="center">Experiments-with-Frameworks</h1>
+<p align="center">
+In this folder, we experimented with bunch of frameworks listed here. 
+</p>
 
-<details open>
+<details>
 <summary>Streamlit</summary>
 <br>
   
