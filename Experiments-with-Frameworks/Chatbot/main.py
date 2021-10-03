@@ -45,7 +45,7 @@ if 'messages' not in st.session_state:
 	st.session_state.messages = list()
 
 if 'lastMessage' not in st.session_state:
-	st.session_state.lastMessage = Message(isAi=False, text="")
+	st.session_state.lastMessage = list()
 
 def chatBubble(message):
     # Initalize columns so the messages are at opposite sides of the page
@@ -77,7 +77,7 @@ if  st.session_state.count > 0:
     
         for message in st.session_state.messages:
             chatBubble(message)
-        chatBubble(st.session_state.lastMessage[0])
+        chatBubble(st.session_state.lastMessage)
        
         
 
