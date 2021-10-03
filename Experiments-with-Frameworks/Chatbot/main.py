@@ -74,7 +74,7 @@ start = st.button("Chat")
 if start:
     st.session_state.count += 1
 if  st.session_state.count > 0:
-        #chatBubble(st.session_state.lastMessage)
+        chatBubble(st.session_state.lastMessage)
         for message in st.session_state.messages:
             chatBubble(message)
         
@@ -83,10 +83,11 @@ if  st.session_state.count > 0:
 
         aiMessage = Message(isAi=True, text=cb.chatbot_response(newMessage))
         st.session_state.messages.append(aiMessage)
-    # Set newMessage to a text field
-        newMessage = st.text_input("Send Message")
         st.session_state.lastMessage = Message(isAi=False, text= newMessage)
         st.session_state.messages.append(st.session_state.lastMessage)
+    # Set newMessage to a text field
+        newMessage = st.text_input("Send Message")
+       
        
 
     # Initalize button
