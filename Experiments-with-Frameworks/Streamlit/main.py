@@ -45,12 +45,12 @@ if  st.session_state.count > 0:
     
    
    
-    if newMessage != oldMessage:
-        message = Message(isAi=False, text= newMessage)
-        st.session_state.messages.insert(0, message)
+
+    message = Message(isAi=False, text= newMessage)
+    st.session_state.messages.append(message)
 
     for message in st.session_state.messages:
         chatBubble(message)
         chatBubble(Message(isAi=True, text="Hello!"))
     newMessage = st.text_input("Send Message")
-    oldMessage = newMessage
+
