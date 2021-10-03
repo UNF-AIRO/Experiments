@@ -22,11 +22,12 @@ newMessage = ""
 oldMessage = "hi!"
 
 
+
 # Message class defined in Pydantic
 class Message(BaseModel):
     isAi: bool
     text: str
-
+newMessage = Message(isAi=False, text="")
 # Sets page config for the streamlit page
 st.set_page_config(page_title='AiRO', page_icon='🧠', layout="wide")
 
@@ -43,6 +44,9 @@ if 'count' not in st.session_state:
 
 if 'messages' not in st.session_state:
 	st.session_state.messages = list()
+
+if 'lastMessage' not in st.session_state:
+	st.session_state.lastMessage = ""
 
 def chatBubble(message):
     # Initalize columns so the messages are at opposite sides of the page
@@ -74,7 +78,7 @@ if  st.session_state.count > 0:
     
         for message in st.session_state.messages:
             chatBubble(message)
-
+        chatBubble(st.session_state.lastMessage)
        
         
 
@@ -82,7 +86,7 @@ if  st.session_state.count > 0:
         st.session_state.messages.append(aiMessage)
     # Set newMessage to a text field
         newMessage = st.text_input("Send Message")
-        message = Message(isAi=False, text= newMessage)
+        st.session_state.lastMessage = Message(isAi=False, text= newMessage)
         st.session_state.messages.append(message)
        
 
