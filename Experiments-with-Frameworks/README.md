@@ -105,22 +105,6 @@ In this folder, we experimented with bunch of frameworks listed here.
 </details>
 
 
-<details>
-<summary> Deactivating the VENV  </summary>
-
-**Make sure you are on a directory that VENV is deactivated.**
-
-[https://github.com/mignev/venv]
-
-
-```source venv/bin/disactivate```
-
-
-</details>
-
-
-
-
 
 <details>
 <summary>Exporting the VENV  </summary>
