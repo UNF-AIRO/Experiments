@@ -74,7 +74,7 @@ start = st.button("Chat")
 if start:
     st.session_state.count += 1
 if  st.session_state.count > 0:
-        chatBubble(st.session_state.lastMessage)
+        #chatBubble(st.session_state.lastMessage)
         for message in st.session_state.messages:
             chatBubble(message)
         
