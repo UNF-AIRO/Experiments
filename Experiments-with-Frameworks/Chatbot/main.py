@@ -72,7 +72,7 @@ if start:
     st.session_state.count += 1
 if  st.session_state.count > 0:
     if newMessage != oldMessage:
-        oldMessage = newMessage
+       
         message = Message(isAi=False, text= newMessage)
         st.session_state.messages.append(message)
         for message in st.session_state.messages:
@@ -82,6 +82,7 @@ if  st.session_state.count > 0:
         st.session_state.messages.append(aiMessage)
     # Set newMessage to a text field
     newMessage = st.text_input("Send Message")
+    oldMessage = newMessage
 
     # Initalize button
    
