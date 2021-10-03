@@ -18,10 +18,8 @@ model = load_model('chatbot_model.h5')
 intents = json.loads(open('intents.json').read())
 words = pickle.load(open('words.pkl','rb'))
 classes = pickle.load(open('classes.pkl','rb'))
-
 newMessage = ""
 oldMessage = ""
-
 
 
 # Message class defined in Pydantic
@@ -73,17 +71,16 @@ start = st.button("Chat")
 if start:
     st.session_state.count += 1
 if  st.session_state.count > 0:
-    
     if newMessage != oldMessage:
-        oldMessage = newMessage
         message = Message(isAi=False, text= newMessage)
-        st.session_state.messages.insert(0, message)
-
-    for message in st.session_state.messages:
-        chatBubble(message)
-        chatBubble(Message(isAi=True, text="Hello!"))
-    newMessage = st.text_input("Send Message")
-    
+        st.session_state.messages.append(message)
+        for message in st.session_state.messages:
+            chatBubble(message)
+        
+        aiMessage = Message(isAi=True, text=cb.chatbot_response(newMessage))
+        st.session_state.messages.append(aiMessage)
+    # Set newMessage to a text field
+        newMessage = st.text_input("Send Message")
 
     # Initalize button
    
