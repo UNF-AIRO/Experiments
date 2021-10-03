@@ -6,8 +6,8 @@ import os
 class Message(BaseModel):
     isAi: bool
     text: str
-
-message = Message(isAi=False, text= "")
+newMessage = ""
+oldMessage = "1"
 st.set_page_config(page_title='AiRO', page_icon='🧠', layout="wide")
 
 def local_css():
@@ -43,12 +43,14 @@ if start:
     st.session_state.count += 1
 if  st.session_state.count > 0:
     
-    newMessage = st.text_input("Send Message")
-    send = st.button("Send")
-    if send:
+   
+   
+    if newMessage != oldMessage:
         message = Message(isAi=False, text= newMessage)
         st.session_state.messages.insert(0, message)
 
     for message in st.session_state.messages:
         chatBubble(message)
         chatBubble(Message(isAi=True, text="Hello!"))
+    newMessage = st.text_input("Send Message")
+    oldMessage = newMessage

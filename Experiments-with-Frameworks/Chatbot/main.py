@@ -19,6 +19,8 @@ intents = json.loads(open('intents.json').read())
 words = pickle.load(open('words.pkl','rb'))
 classes = pickle.load(open('classes.pkl','rb'))
 
+newMessage = ""
+oldMessage = ""
 
 
 
@@ -72,21 +74,23 @@ if start:
     st.session_state.count += 1
 if  st.session_state.count > 0:
     
-    # Set newMessage to a text field
-    newMessage = st.text_input("Send Message")
-
-    # Initalize button
-    send = st.button("Send")
-
-    # If send, send the message and process the text for the chatbot
-    if send:
+    if newMessage != oldMessage:
         message = Message(isAi=False, text= newMessage)
-        st.session_state.messages.append(message)
-        aiMessage = Message(isAi=True, text=cb.chatbot_response(newMessage))
-        st.session_state.messages.append(aiMessage)
+        st.session_state.messages.insert(0, message)
 
-    # Display the chat bubbles
     for message in st.session_state.messages:
         chatBubble(message)
+        chatBubble(Message(isAi=True, text="Hello!"))
+    newMessage = st.text_input("Send Message")
+    oldMessage = newMessage
+
+    # Initalize button
+   
+
+    # If send, send the message and process the text for the chatbot
+    
+
+    # Display the chat bubbles
+     
        
     
