@@ -77,7 +77,7 @@ if  st.session_state.count > 0:
     
         for message in st.session_state.messages:
             chatBubble(message)
-        chatBubble(st.session_state.lastMessage)
+        chatBubble(st.session_state.lastMessage.text)
        
         
 
