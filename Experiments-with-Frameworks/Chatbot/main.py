@@ -26,7 +26,7 @@ oldMessage = "hi!"
 class Message(BaseModel):
     isAi: bool
     text: str
-newMessage = Message(isAi=False, text="")
+newMessage = list()
 # Sets page config for the streamlit page
 st.set_page_config(page_title='AiRO', page_icon='🧠', layout="wide")
 
@@ -77,7 +77,7 @@ if  st.session_state.count > 0:
     
         for message in st.session_state.messages:
             chatBubble(message)
-        chatBubble(st.session_state.lastMessage)
+        chatBubble(st.session_state.lastMessage[0])
        
         
 
