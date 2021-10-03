@@ -26,7 +26,7 @@ oldMessage = "hi!"
 class Message(BaseModel):
     isAi: bool
     text: str
-newMessage = list()
+newMessage = ""
 # Sets page config for the streamlit page
 st.set_page_config(page_title='AiRO', page_icon='🧠', layout="wide")
 
