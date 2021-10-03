@@ -80,12 +80,12 @@ if  st.session_state.count > 0:
         
        
         
-
+        st.session_state.messages.append(Message(isAi=False, text= newMessage))
         aiMessage = Message(isAi=True, text=cb.chatbot_response(newMessage))
         st.session_state.messages.append(aiMessage)
     # Set newMessage to a text field
         newMessage = st.text_input("Send Message")
-        st.session_state.messages.append(Message(isAi=False, text= newMessage))
+        
        
 
     # Initalize button
