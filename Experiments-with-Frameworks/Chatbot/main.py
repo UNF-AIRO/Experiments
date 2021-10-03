@@ -75,6 +75,7 @@ if start:
 if  st.session_state.count > 0:
     
     if newMessage != oldMessage:
+        oldMessage = newMessage
         message = Message(isAi=False, text= newMessage)
         st.session_state.messages.insert(0, message)
 
@@ -82,7 +83,7 @@ if  st.session_state.count > 0:
         chatBubble(message)
         chatBubble(Message(isAi=True, text="Hello!"))
     newMessage = st.text_input("Send Message")
-    oldMessage = newMessage
+    
 
     # Initalize button
    
