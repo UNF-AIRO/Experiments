@@ -69,21 +69,6 @@ In this folder, we experimented with bunch of frameworks listed here.
 
 
 
-
-<details>
-<summary>Activating VENV Environment </summary>
-
-**Make sure you are on a directory that VENV is created on**
-
-
-[https://realpython.com/python-virtual-environments-a-primer/]
-
-```source venv/bin/activate```
-</details>
-
-
-
-
 <details>
 <summary>Installing Django </summary>
 
