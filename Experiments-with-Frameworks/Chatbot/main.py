@@ -26,7 +26,7 @@ oldMessage = "hi!"
 class Message(BaseModel):
     isAi: bool
     text: str
-newMessage = ""
+
 # Sets page config for the streamlit page
 st.set_page_config(page_title='AiRO', page_icon='🧠', layout="wide")
 
@@ -44,8 +44,8 @@ if 'count' not in st.session_state:
 if 'messages' not in st.session_state:
 	st.session_state.messages = list()
 
-if 'lastMessage' not in st.session_state:
-	st.session_state.lastMessage = Message(isAi=False, text="")
+if 'newMessage' not in st.session_state:
+	st.session_state.newMessage = ""
 
 def chatBubble(message):
     # Initalize columns so the messages are at opposite sides of the page
@@ -74,17 +74,18 @@ start = st.button("Chat")
 if start:
     st.session_state.count += 1
 if  st.session_state.count > 0:
+        st.session_state.messages.append(Message(isAi=False, text= st.session_state.newMessage))
         #chatBubble(st.session_state.lastMessage)
         for message in st.session_state.messages:
             chatBubble(message)
         
        
         
-        st.session_state.messages.append(Message(isAi=False, text= newMessage))
-        aiMessage = Message(isAi=True, text=cb.chatbot_response(newMessage))
+        
+        aiMessage = Message(isAi=True, text=cb.chatbot_response(st.session_state.newMessage))
         st.session_state.messages.append(aiMessage)
     # Set newMessage to a text field
-        newMessage = st.text_input("Send Message")
+        st.session_state.newMessage = st.text_input("Send Message")
         
        
 
