@@ -86,8 +86,8 @@ if  st.session_state.count > 0:
         
         
     # Set newMessage to a text field
-        st.session_state.newMessage = st.text_input("Send Message")
-        
+        #st.session_state.newMessage = st.text_input("Send Message")
+        st.text_input("Send Message", key="newMessage")
        
 
     # Initalize button
