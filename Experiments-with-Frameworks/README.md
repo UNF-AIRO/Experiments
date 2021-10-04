@@ -20,6 +20,9 @@ In this folder, we experimented with bunch of frameworks listed here.
 
 <details>
 <summary>Django</summary>
+
+# Django
+
 <br>
 <b>Requirements: Ubuntu 20.04</b>
 
@@ -118,9 +121,27 @@ In this folder, we experimented with bunch of frameworks listed here.
 
 
 </details>
-
-
-
-
 </details>
 
+
+
+
+
+<details>
+<summary>Tensorflow</summary>
+
+# Tensorflow
+
+<br>
+
+**To install Tensorflow, please use this command:**
+
+[https://www.tensorflow.org/install]
+
+```pip3 install tensorflow```
+
+
+
+  
+</br>
+</details>
