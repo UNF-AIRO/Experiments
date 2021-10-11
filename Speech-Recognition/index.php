@@ -33,10 +33,17 @@
 	<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/senalbulumulle/FOIL-UI-Framework-Library/FOIL-UI.css>
 </head>
 
-<body>
 
-	<?php include './System_Files/system.global.status.bar.php'?>
-	<?php include './System_Files/system.global.time.php'?>
-</body>
+<?php 
 
-</html>
+
+
+function includeLists() {
+  include './System_Files/system.global.status.bar.php';
+  include './System_Files/system.global.time.php';
+  include './System_Files/system.global.content.php';
+}
+
+// Call the functions
+includeLists();
+?>
