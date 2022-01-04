@@ -51,7 +51,7 @@ sudo chmod 777 install-firn
 
 
 ## Get special permission from /usr/local/bin/
-sudo chmod 777 /usr/local/bin/firn
+sudo chmod 777 ../../usr/local/bin/
 
 ## Run the file
 ./install-firn
