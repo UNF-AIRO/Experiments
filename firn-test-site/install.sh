@@ -14,7 +14,7 @@
 
 
 ## Goes to the home directory
-cd $HOME
+cd 
 
 
 
