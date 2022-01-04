@@ -28,7 +28,7 @@ curl -s https://raw.githubusercontent.com/theiceshelf/firn/master/install -o ins
 ## Tell the user to put their superuser password to create 
 ## special file permissions for installing firn
 
-#echo """
+echo """
 #######################################################################
 #	In this next step, please enter your sudo (superuser) 
 #       password to create file permission privileges for 
@@ -39,20 +39,20 @@ curl -s https://raw.githubusercontent.com/theiceshelf/firn/master/install -o ins
 ######################################################################
 
 
-#"""
+"""
 
-#sleep 6
+sleep 6
 
 ## Create file permission privileges for installing firn
 
 
 ## Goes to superuser mode 
 
-#sudo su
+sudo su
 
 
 ## Make it runnable
-#chmod -x install-firn && ./install-firn
+chmod -x install-firn && ./install-firn
 
 
 
