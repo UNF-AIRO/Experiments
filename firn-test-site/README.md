@@ -32,15 +32,25 @@ Source: [https://github.com/theiceshelf/firn/blob/master/README.org]
 
 2. ```sudo chmod -x install-firn && ./install-firn```
 
+
+
+
 	
 #### Credits
 
-
-
 https://firn.theiceshelf.com/
+
 https://github.com/theiceshelf/firn/
+
+
 https://github.com/theiceshelf/firn/blob/master/README.org
+
+
 https://arcolinux.com/
+
+
 https://archlinux.org/
+
+
 https://git-scm.com/
 ``
