@@ -27,10 +27,10 @@ you can install firn.
 
 Source: [https://github.com/theiceshelf/firn/blob/master/README.org]
 
-1. curl -s https://raw.githubusercontent.com/theiceshelf/firn/master/install -o install-firn
+1. ```curl -s https://raw.githubusercontent.com/theiceshelf/firn/master/install -o install-firn```
 
 
-2. sudo chmod -x install-firn && ./install-firn
+2. ```sudo chmod -x install-firn && ./install-firn```
 
 	
 #### Credits
