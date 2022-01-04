@@ -21,7 +21,7 @@ cd
 
 ## Downloads firn
 
-curl -s https://raw.githubusercontent.com/theiceshelf/firn/master/install -o install-firm
+curl -s https://raw.githubusercontent.com/theiceshelf/firn/master/install -o install-firn
 
 
 
