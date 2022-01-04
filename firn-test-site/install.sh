@@ -46,3 +46,8 @@ sleep 6
 ## Create file permission privileges for installing firn
 
 sudo chmod 777 install-firn
+
+
+
+## Run the file
+./install-firn
