@@ -45,14 +45,4 @@ sleep 6
 
 ## Create file permission privileges for installing firn
 
-
-## Goes to superuser mode 
-
-sudo su
-
-
-## Make it runnable
-chmod -x install-firn && ./install-firn
-
-
-
+sudo chmod -x install-firn && ./install-firn
