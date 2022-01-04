@@ -55,3 +55,13 @@ sudo chmod 777 ../../usr/local/bin/
 
 ## Run the file
 ./install-firn
+
+
+## Prompt the user that the installation has been completed
+echo """
+#######################################################################
+#	The installation has been completed. 
+######################################################################
+"""
+
+
