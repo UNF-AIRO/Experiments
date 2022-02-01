@@ -87,9 +87,7 @@ body {
   }
   .container {
     position: fixed;
-    display: grid;
-    align-items: center;
-    justify-items: center;
+   
   }
   .stTextInput>div>div>input {
     position:absolute;
