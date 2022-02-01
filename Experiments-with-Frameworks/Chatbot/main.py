@@ -54,12 +54,12 @@ def chatBubble(message):
          with col1:
             # Html bubble message
             if message.text != "":
-                st.sidebar.markdown(f'<div class="chat"><div class="yours messages"><div class="message last">{message.text}</div></div> <div class="yours messages">', unsafe_allow_html=True)
+                st.markdown(f'<div class="chat"><div class="yours messages"><div class="message last">{message.text}</div></div> <div class="yours messages">', unsafe_allow_html=True)
     else:
          with col2:
              # Html bubble message
             if message.text != "":
-                st.sidebar.markdown(f'<div class="chat"><div class="mine messages"><div class="message last">{message.text}</div></div> <div class="mine messages">', unsafe_allow_html=True)
+                st.markdown(f'<div id= "chat" class="chat"><div class="mine messages"><div class="message last">{message.text}</div></div> <div class="mine messages">', unsafe_allow_html=True)
 # Image on top
 st.image("AiRO.png")
 
@@ -71,26 +71,27 @@ st.subheader("Chat about UNF...")
 
 # Initalize button
 start = st.button("Chat")
-
+with st.container():
 # If start then add to count state var, is a count so that when the page updates, the chat still appears
-if start:
-    st.session_state.count += 1
-if  st.session_state.count > 0:
-        if st.session_state.newMessage != "":
-            st.session_state.messages.append(Message(isAi=False, text= st.session_state.newMessage))
-            aiMessage = Message(isAi=True, text=cb.chatbot_response(st.session_state.newMessage))
-            st.session_state.messages.append(aiMessage)
-        #chatBubble(st.session_state.lastMessage)
-        for message in st.session_state.messages:
-            chatBubble(message)
+    if start:
+        st.session_state.count += 1
+    if  st.session_state.count > 0:
+            if st.session_state.newMessage != "":
+                st.session_state.messages.append(Message(isAi=False, text= st.session_state.newMessage))
+                aiMessage = Message(isAi=True, text=cb.chatbot_response(st.session_state.newMessage))
+                st.session_state.messages.append(aiMessage)
+            #chatBubble(st.session_state.lastMessage)
+            for message in st.session_state.messages:
+                chatBubble(message)
+                #st.markdown("<script language='javascript'>document.getElementById('chat').scrollIntoView();</script>",  unsafe_allow_html=True)
+            
         
-       
-        
-        
-        
+            
+            
+            
     # Set newMessage to a text field
         #st.session_state.newMessage = st.text_input("Send Message")
-        st.text_input("Send Message", key="newMessage")
+st.text_input("Send Message", key="newMessage")
        
 
     # Initalize button

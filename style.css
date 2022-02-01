@@ -1,8 +1,11 @@
 body {
     color: white;
     background-color: #4F8BF9;
+    
 }
-
+.container {
+  height: 500px;
+}
 .stButton>button {
     background-image: linear-gradient( to right bottom, #47E6B1, #47E6C9);
     color: white;
@@ -27,9 +30,7 @@ body {
     color:white;
     background-color: #0066cc;
     }
-.stTextInput>div>div>input {
-    
-}
+
 
 .stHeader {
     color: #4F8BF9;
@@ -79,14 +80,18 @@ body {
   }
   
   .mine .message {
-    border-radius: 60px;
+    border-radius: 5%;
     color: white;
     margin-left: 25%;
     background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
     background-attachment: fixed;
     position: relative;
   }
+
+  .stTextInput>div>div>input {
   
+
+  }
 
   
   
