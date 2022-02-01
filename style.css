@@ -79,7 +79,7 @@ body {
   }
   
   .mine .message {
-    border-radius: 60px;
+    border-radius: 5%;
     color: white;
     margin-left: 25%;
     background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
