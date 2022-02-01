@@ -6,3 +6,4 @@ numpy
 pickle5
 fastapi
 keras
+tensorflow
