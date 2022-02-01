@@ -88,9 +88,8 @@ body {
   }
   
   .stTextInput>div>div>input {
-    margin-bottom: 10%;
-    z-index: 1;
-    position: absolute;
+    position:absolute;
+    bottom:0;
 
   }
 
