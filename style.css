@@ -93,6 +93,15 @@ body {
     bottom:0;
 
   }
-
+  .zstack {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+  }
+  .zstack > * {
+    grid-area: 1/1/1/1;
+  }
+  
+  
   
   
