@@ -86,19 +86,21 @@ body {
     position: relative;
   }
   .container {
-    position:relative;
+    display: grid;
+    align-items: center;
+    justify-items: center;
   }
   .stTextInput>div>div>input {
     position:absolute;
     bottom:0;
 
   }
-  .zstack {
+  /* .zstack {
     display: grid;
     align-items: center;
     justify-items: center;
-  }
-  .zstack > * {
+  } */
+  .container > * {
     grid-area: 1/1/1/1;
   }
   

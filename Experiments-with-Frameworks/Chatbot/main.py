@@ -90,8 +90,7 @@ if  st.session_state.count > 0:
         
     # Set newMessage to a text field
         #st.session_state.newMessage = st.text_input("Send Message")
-        st.markdown(f'<div class="zstack"><div class="stTextInput"></div> <div class="yours messages">', unsafe_allow_html=True)
-        # st.container().text_input("Send Message", key="newMessage")
+        st.container().text_input("Send Message", key="newMessage")
        
 
     # Initalize button
