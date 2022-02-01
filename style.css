@@ -87,6 +87,12 @@ body {
     position: relative;
   }
   
+  .stTextInput>div>div>input {
+    margin-top: 90%;
+    z-index: 1;
+    position: absolute;
+
+  }
 
   
   

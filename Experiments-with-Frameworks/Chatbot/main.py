@@ -54,12 +54,12 @@ def chatBubble(message):
          with col1:
             # Html bubble message
             if message.text != "":
-                st.sidebar.markdown(f'<div class="chat"><div class="yours messages"><div class="message last">{message.text}</div></div> <div class="yours messages">', unsafe_allow_html=True)
+                st.markdown(f'<div class="chat"><div class="yours messages"><div class="message last">{message.text}</div></div> <div class="yours messages">', unsafe_allow_html=True)
     else:
          with col2:
              # Html bubble message
             if message.text != "":
-                st.sidebar.markdown(f'<div class="chat"><div class="mine messages"><div class="message last">{message.text}</div></div> <div class="mine messages">', unsafe_allow_html=True)
+                st.markdown(f'<div class="chat"><div class="mine messages"><div class="message last">{message.text}</div></div> <div class="mine messages">', unsafe_allow_html=True)
 # Image on top
 st.image("AiRO.png")
 
@@ -71,7 +71,7 @@ st.subheader("Chat about UNF...")
 
 # Initalize button
 start = st.button("Chat")
-
+container = st.container()
 # If start then add to count state var, is a count so that when the page updates, the chat still appears
 if start:
     st.session_state.count += 1
