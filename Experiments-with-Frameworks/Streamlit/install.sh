@@ -8,3 +8,5 @@
 
 
 sudo -H pip3 install streamlit
+
+sudo -H pip3 install pydantic
