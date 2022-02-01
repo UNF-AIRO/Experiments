@@ -88,8 +88,8 @@ body {
   }
  
   .stTextInput>div>div>input {
-    position: relative;
-    min-height: 150px;
+    display: inline-block;
+    align-self: flex-end;
 
   }
 
