@@ -86,6 +86,7 @@ body {
     position: relative;
   }
   .container {
+    position: fixed;
     display: grid;
     align-items: center;
     justify-items: center;
