@@ -1,6 +1,7 @@
 body {
     color: white;
     background-color: #4F8BF9;
+    position:relative;
 }
 
 .stButton>button {
@@ -27,9 +28,7 @@ body {
     color:white;
     background-color: #0066cc;
     }
-.stTextInput>div>div>input {
-    
-}
+
 
 .stHeader {
     color: #4F8BF9;
