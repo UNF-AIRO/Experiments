@@ -1,7 +1,7 @@
 body {
     color: white;
     background-color: #4F8BF9;
-    position:relative;
+    
 }
 
 .stButton>button {
@@ -85,7 +85,9 @@ body {
     background-attachment: fixed;
     position: relative;
   }
-  
+  .container {
+    position:relative;
+  }
   .stTextInput>div>div>input {
     position:absolute;
     bottom:0;
