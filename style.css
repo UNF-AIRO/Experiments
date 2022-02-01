@@ -85,24 +85,11 @@ body {
     background-attachment: fixed;
     position: relative;
   }
-  .container {
-    position: fixed;
-   
-  }
+
   .stTextInput>div>div>input {
-    position:absolute;
-    bottom:0;
+    margin:0px;
 
   }
-  /* .zstack {
-    display: grid;
-    align-items: center;
-    justify-items: center;
-  } */
-  .container > * {
-    grid-area: 1/1/1/1;
-  }
-  
-  
+
   
   
