@@ -12,7 +12,7 @@ from typing import List
 # Downloads needed nltk
 nltk.download('punkt')
 nltk.download('wordnet')
-
+nltk.download("omw-1.4")
 # Loads needed files
 model = load_model('chatbot_model.h5')
 intents = json.loads(open('intents.json').read())
