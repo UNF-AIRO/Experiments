@@ -59,7 +59,7 @@ def chatBubble(message):
          with col2:
              # Html bubble message
             if message.text != "":
-                st.markdown(f'<div class="chat"><div class="mine messages"><div class="message last">{message.text}</div></div> <div class="mine messages">', unsafe_allow_html=True)
+                st.markdown(f'<div id= "chat" class="chat"><div class="mine messages"><div class="message last">{message.text}</div></div> <div class="mine messages">', unsafe_allow_html=True)
 # Image on top
 st.image("AiRO.png")
 
@@ -83,6 +83,7 @@ if  st.session_state.count > 0:
         #chatBubble(st.session_state.lastMessage)
         for message in st.session_state.messages:
             chatBubble(message)
+            st.markdown("<script>document.getElementById('chat').scrollIntoView();<script/>")
         
        
         
