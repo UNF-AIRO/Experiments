@@ -87,7 +87,8 @@ body {
   }
 
   .stTextInput>div>div>input {
-    margin:0px;
+    position:absolute;                 
+    bottom:0;  
 
   }
 
