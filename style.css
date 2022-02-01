@@ -3,7 +3,9 @@ body {
     background-color: #4F8BF9;
     
 }
-
+.container {
+  height: 500px;
+}
 .stButton>button {
     background-image: linear-gradient( to right bottom, #47E6B1, #47E6C9);
     color: white;
@@ -40,7 +42,6 @@ body {
 
   .chat {
     width: 300px;
-    height: 500px;
     display: flex;
     flex-direction: column;
     padding: 10px;

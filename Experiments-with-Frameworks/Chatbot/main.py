@@ -71,27 +71,27 @@ st.subheader("Chat about UNF...")
 
 # Initalize button
 start = st.button("Chat")
-container = st.container()
+with st.container:
 # If start then add to count state var, is a count so that when the page updates, the chat still appears
-if start:
-    st.session_state.count += 1
-if  st.session_state.count > 0:
-        if st.session_state.newMessage != "":
-            st.session_state.messages.append(Message(isAi=False, text= st.session_state.newMessage))
-            aiMessage = Message(isAi=True, text=cb.chatbot_response(st.session_state.newMessage))
-            st.session_state.messages.append(aiMessage)
-        #chatBubble(st.session_state.lastMessage)
-        for message in st.session_state.messages:
-            chatBubble(message)
-            #st.markdown("<script language='javascript'>document.getElementById('chat').scrollIntoView();</script>",  unsafe_allow_html=True)
+    if start:
+        st.session_state.count += 1
+    if  st.session_state.count > 0:
+            if st.session_state.newMessage != "":
+                st.session_state.messages.append(Message(isAi=False, text= st.session_state.newMessage))
+                aiMessage = Message(isAi=True, text=cb.chatbot_response(st.session_state.newMessage))
+                st.session_state.messages.append(aiMessage)
+            #chatBubble(st.session_state.lastMessage)
+            for message in st.session_state.messages:
+                chatBubble(message)
+                #st.markdown("<script language='javascript'>document.getElementById('chat').scrollIntoView();</script>",  unsafe_allow_html=True)
+            
         
-       
-        
-        
-        
+            
+            
+            
     # Set newMessage to a text field
         #st.session_state.newMessage = st.text_input("Send Message")
-        st.container().text_input("Send Message", key="newMessage")
+st.text_input("Send Message", key="newMessage")
        
 
     # Initalize button
