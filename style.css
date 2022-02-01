@@ -65,7 +65,7 @@ body {
   }
   
   .yours .message {
-    border-radius: 60px;
+    border-radius: 5%;
     margin-right: 25%;
     color: white;
     background-color: #47E6B1;
