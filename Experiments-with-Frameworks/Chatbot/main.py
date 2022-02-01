@@ -83,7 +83,7 @@ if  st.session_state.count > 0:
         #chatBubble(st.session_state.lastMessage)
         for message in st.session_state.messages:
             chatBubble(message)
-            st.markdown("<script>document.getElementById('chat').scrollIntoView();<script/>")
+            st.markdown("<script>document.getElementById('chat').scrollIntoView();</script>")
         
        
         
