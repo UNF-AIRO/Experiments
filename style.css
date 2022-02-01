@@ -90,8 +90,7 @@ body {
   .stTextInput>div>div>input {
     margin-top: 70%;
     z-index: 1;
-    min-height: 300px;
-    position: absolute;
+
 
   }
 
