@@ -53,11 +53,13 @@ def chatBubble(message):
     if message.isAi:
          with col1:
             # Html bubble message
-            st.sidebar.markdown(f'<div class="chat"><div class="yours messages"><div class="message last">{message.text}</div></div> <div class="yours messages">', unsafe_allow_html=True)
+            if message.text != "":
+                st.sidebar.markdown(f'<div class="chat"><div class="yours messages"><div class="message last">{message.text}</div></div> <div class="yours messages">', unsafe_allow_html=True)
     else:
          with col2:
              # Html bubble message
-            st.sidebar.markdown(f'<div class="chat"><div class="mine messages"><div class="message last">{message.text}</div></div> <div class="mine messages">', unsafe_allow_html=True)
+            if message.text != "":
+                st.sidebar.markdown(f'<div class="chat"><div class="mine messages"><div class="message last">{message.text}</div></div> <div class="mine messages">', unsafe_allow_html=True)
 # Image on top
 st.image("AiRO.png")
 

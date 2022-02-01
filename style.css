@@ -53,8 +53,8 @@ body {
   }
   
   .message {
-    border-radius: 60px;
-    padding: 8px 15px;
+    border-radius: 20px;
+    padding: 10px 17px;
     margin-top: 5px;
     margin-bottom: 5px;
     display: inline-block;
