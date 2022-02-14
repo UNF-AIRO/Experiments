@@ -60,6 +60,35 @@ while :
 		## After the user chooses yes, then it will install 
 		
 		1)      
+			ip link					## Get the network to work 
+
+			timedatectl set-ntp true		## Get the system clock to be updated
+
+			fdisk /dev/sda1				## Modify the partition tables
+
+			mkfs.ext4 /dev/sda1			## Create the file system 
+
+			mkswap /dev/sda2			## Swap the file system 
+
+			mkfs.fat -F 32 /dev/sda3		## Create an EFI File system 
+
+			mount /dev/sda3	/mnt/boot		## Mount the drive
+
+			swapon /dev/sda2			## enable the volume using swapon
+
+
+			## Install packages such as the kernel, firmware
+			pacstrap /mnt base linux linux-firmware 
+
+			## Configure the system with fstab
+			genfstab -U /mnt >> /mnt/etc/fstab
+
+
+			## Chroot into the installed system
+			arch-chroot /mnt
+			
+
+
 
                         ;;
 
