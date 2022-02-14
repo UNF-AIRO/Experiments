@@ -64,11 +64,13 @@ while :
 
 			timedatectl set-ntp true		## Get the system clock to be updated
 
-			fdisk /dev/sda <<EOF			## Automatically set and format the partition
+			fdisk /dev/sda <<EOF			
 			n
 			p
+			1
 			w
-			>>EOF
+			EOF
+			
 			
 			mkfs.ext4 /dev/sda1			## Create the file system 
 
