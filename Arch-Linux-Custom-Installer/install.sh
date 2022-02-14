@@ -66,13 +66,13 @@ while :
 
 			mkfs.ext4 /dev/sda1			## Create the file system 
 
-			mkswap /dev/sda2			## Swap the file system 
+			mkswap /dev/sda1			## Swap the file system 
 
-			mkfs.fat -F 32 /dev/sda3		## Create an EFI File system 
+			mkfs.fat -F 32 /dev/sda1		## Create an EFI File system 
 
-			mount /dev/sda3	/mnt/boot		## Mount the drive
+			mount /dev/sda1	/mnt/boot		## Mount the drive
 
-			swapon /dev/sda2			## enable the volume using swapon
+			swapon /dev/sda1			## enable the volume using swapon
 
 
 			## Install packages such as the kernel, firmware
