@@ -64,7 +64,11 @@ while :
 
 			timedatectl set-ntp true		## Get the system clock to be updated
 
-			cfdisk /dev/sda1			## Creates a partition table with cfdisk
+			cfdisk /dev/sda <<EOF
+			n
+			p
+			w
+			EOF
 			
 			mkfs.ext4 /dev/sda1			## Create the file system 
 
