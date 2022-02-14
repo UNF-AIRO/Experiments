@@ -67,9 +67,8 @@ while :
 			fdisk /dev/sda <<EOF			## Automatically set and format the partition
 			n
 			p
-			
 			w
-			EOF
+			>>EOF
 			
 			mkfs.ext4 /dev/sda1			## Create the file system 
 
