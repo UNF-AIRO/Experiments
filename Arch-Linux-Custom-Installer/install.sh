@@ -64,11 +64,7 @@ while :
 
 			timedatectl set-ntp true		## Get the system clock to be updated
 
-			cfdisk /dev/sda <<EOF
-			n
-			p
-			w
-			EOF
+			cfdisk /dev/sda <<EOF	npwEOF
 			
 			mkfs.ext4 /dev/sda1			## Create the file system 
 
