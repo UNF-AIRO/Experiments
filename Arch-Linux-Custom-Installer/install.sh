@@ -64,6 +64,8 @@ while :
 
 			timedatectl set-ntp true		## Get the system clock to be updated
 
+			cfdisk /dev/sda1			## Creates a partition table with cfdisk
+			
 			mkfs.ext4 /dev/sda1			## Create the file system 
 
 			mkswap /dev/sda1			## Swap the file system 
