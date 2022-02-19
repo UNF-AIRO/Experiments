@@ -1,7 +1,0 @@
-pydantic
-streamlit==0.89.0
-fastapi
-nltk
-numpy
-tensorflow==2.2
-pickle5
