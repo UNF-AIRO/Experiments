@@ -1,0 +1,9 @@
+pydantic
+streamlit==0.89.0
+fastapi
+nltk
+numpy
+pickle5
+fastapi
+keras
+tensorflow
