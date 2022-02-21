@@ -1,0 +1,97 @@
+body {
+    color: white;
+    background-color: #4F8BF9;
+    
+}
+.container {
+  height: 500px;
+}
+.stButton>button {
+    background-image: linear-gradient( to right bottom, #47E6B1, #47E6C9);
+    color: white;
+    
+}
+.stButton>button:focus:not(:active) {
+    border-color: #ffffff;
+    box-shadow: none;
+    color: #ffffff;
+    background-color: #0066cc;
+    }
+    .stButton>button:focus(:active) {
+    border-color: white;
+    box-shadow: none;
+    color: white;
+    background-color: #0066cc;
+    }
+    .stButton>button:focus(:active){
+    background-color: #0066cc;
+    border-color: white;
+    box-shadow: none;
+    color:white;
+    background-color: #0066cc;
+    }
+
+
+.stHeader {
+    color: #4F8BF9;
+}
+.stButton>button:hover{color:white;}
+
+.stButton>button:focus{color:white;}
+
+
+  .chat {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .messages {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .message {
+    border-radius: 0.1%;
+    padding: 10px 17px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+  
+  .yours {
+    align-items: flex-start;
+  }
+  
+  .yours .message {
+    border-radius: 5%;
+    margin-right: 25%;
+    color: white;
+    background-color: #47E6B1;
+    position: relative;
+  }
+  
+  
+
+  .mine {
+    align-items: flex-end;
+  }
+  
+  .mine .message {
+    border-radius: 5%;
+    color: white;
+    margin-left: 25%;
+    background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
+    background-attachment: fixed;
+    position: relative;
+  }
+
+  .stTextInput>div>div>input {
+  
+
+  }
+
+  
+  
