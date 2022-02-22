@@ -11,32 +11,32 @@
 ##########################################################
 
 
-initialize-packages() {
+initializePackages() {
         pacman -Sy
 }
 
-update-packages() {
+updatePackages() {
         pacman -Syyu
 }
 
-install-packages() {
+installPackages() {
         pacman -S git                   ## Install git
         pacman -S php                   ## Install php
         pacman -S python                ## Install python
         pacman -S npm                   ## Install npm
 }
 
-install-dependencies() {
-        ## Later 
+installDependencies() {
+        echo "lateron"
 }
 
 
-install-repositories() {
+installRepositories() {
         git clone https://github.com/UNF-AIRO/Experiments
 }
 
 
-initialize-packages
-update-packages
-install-packages
-install-repositories
+initializePackages
+updatePackages
+installPackages
+installRepositories
