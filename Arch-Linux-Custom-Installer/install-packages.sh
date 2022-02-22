@@ -11,30 +11,32 @@
 ##########################################################
 
 
-function initialize-packages {
+initialize-packages() {
         pacman -Sy
 }
 
-function update-packages {
+update-packages() {
         pacman -Syyu
 }
 
-function install-packages {
+install-packages() {
         pacman -S git                   ## Install git
         pacman -S php                   ## Install php
         pacman -S python                ## Install python
         pacman -S npm                   ## Install npm
 }
 
-function install-dependencies {
+install-dependencies() {
         ## Later 
 }
 
 
-function install-repositories {
+install-repositories() {
         git clone https://github.com/UNF-AIRO/Experiments
 }
 
 
 initialize-packages
 update-packages
+install-packages
+install-repositories
