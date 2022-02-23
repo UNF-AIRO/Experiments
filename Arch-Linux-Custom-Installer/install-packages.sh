@@ -32,6 +32,10 @@ installDependencies() {
 
 
 installRepositories() {
+        ## Change directory to default before cloning repositories
+        cd
+
+        ## Clone UNF-AIRO Repositories                                   
         git clone https://github.com/UNF-AIRO/Experiments
 }
 
