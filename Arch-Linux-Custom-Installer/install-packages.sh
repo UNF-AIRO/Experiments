@@ -12,18 +12,18 @@
 
 
 initializePackages() {
-        pacman -Sy
+        sudo pacman -Sy
 }
 
 updatePackages() {
-        pacman -Syyu
+       sudo pacman -Syyu
 }
 
 installPackages() {
-        pacman -S git                   ## Install git
-        pacman -S php                   ## Install php
-        pacman -S python                ## Install python
-        pacman -S npm                   ## Install npm
+        sudo pacman -S git                   ## Install git
+        sudo pacman -S php                   ## Install php
+        sudo pacman -S python                ## Install python
+        sudo pacman -S npm                   ## Install npm
 }
 
 installDependencies() {
@@ -38,5 +38,6 @@ installRepositories() {
 
 initializePackages
 updatePackages
+installDependencies
 installPackages
 installRepositories
