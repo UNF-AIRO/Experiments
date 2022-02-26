@@ -1,15 +1,15 @@
 ####################################################
 #	tempOne.sh
-#	Moves files to Experiments-with-Frameworks/Chatbot
+#	Moves files to Experiments-with-Frameworks/Chatbot-Local
 #
 #
 ####################################################
 
 
-mv classes.pkl Experiments-with-Frameworks/Chatbot
-mv chatbot_model.h5 Experiments-with-Frameworks/Chatbot
-## mv classes,pkl Experiments-with-Frameworks/Chatbot
-##mv words.pkl Experiments-with-Frameworks/Chatbot
-##mv intents.json Experiments-with-Frameworks/Chatbot
-##mv Speech-Recognition Experiments-with-Frameworks/Chatbot
-##mv AiRO.png Experiments-with-Frameworks/Chatbot
+cp classes.pkl Experiments-with-Frameworks/Chatbot-Local
+cp chatbot_model.h5 Experiments-with-Frameworks/Chatbot-Local
+cp classes,pkl Experiments-with-Frameworks/Chatbot-Local
+cp words.pkl Experiments-with-Frameworks/Chatbot-Local
+cp intents.json Experiments-with-Frameworks/Chatbot-Local
+cp Speech-Recognition Experiments-with-Frameworks/Chatbot-Local
+cp AiRO.png Experiments-with-Frameworks/Chatbot-Local
