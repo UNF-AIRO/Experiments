@@ -10,3 +10,10 @@
 sudo -H pip3 install streamlit
 
 sudo -H pip3 install pydantic
+
+sudo -H pip3 install nltk
+
+sudo -H pip3 install keras 
+
+sudo -H pip3 install tensorflow
+
