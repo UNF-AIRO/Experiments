@@ -6,13 +6,28 @@ Introduction Later
 
 #### Requirements
 
-- [ ] Arch Linux
-- [ ] git
+- [ ] Arch Linux [Arco Linux]
+- [ ] git          
+- [ ] Python
 
 #### Installation
 
-Installation Later
+Here are the steps to install the dependencies for the chatbot 
+
+```shell
+sh install.sh
+```
 
 #### Running the program
 
 https://share.streamlit.io/unf-airo/experiments/main/Experiments-with-Frameworks/Chatbot/main.py
+
+
+
+#### Running the program locally
+
+Here is the command to run the program locally
+
+```shell
+sh run.sh
+```
