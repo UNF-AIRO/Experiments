@@ -1,0 +1,3 @@
+[submodule "AIRO-Arch-Linux-Server-Web-Interface/FOIL-UI-Framework-Library"]
+	path = AIRO-Arch-Linux-Server-Web-Interface/FOIL-UI-Framework-Library
+	url = https://github.com/senalbulumulle/FOIL-UI-Framework-Library
