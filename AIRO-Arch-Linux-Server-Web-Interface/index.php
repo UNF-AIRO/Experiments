@@ -16,4 +16,8 @@
 	 <h1> Menu </h1>
 </div>
 
+
+<a href="#" class="FOIL-Button color-is-red">SHUTDOWN </a>
+<a href="#" class="FOIL-Button color-is-red">RESTART</a>
+
 </div>
