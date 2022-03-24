@@ -1,0 +1,61 @@
+/*****************************************************************************************************
+*       FOIL-Home User Interface
+*
+*
+*
+******************************************************************************************************/
+
+
+@import url('FOIL-UI.css');
+
+body{
+zoom: .80;
+}
+
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  color:transparent;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+/* FOIL-Layout is modified as a replacement for the Home Screen Main Screen UI */
+.FOIL-Layout {
+  background-color:transparent;
+  color:black;
+  padding-bottom: 91px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.459), 0 20px 20px 0 rgba(61, 61, 61, 0.589);
+}
+
+/* Window Blinds Effect */
+.window-blinds-effect {
+  resize: vertical;
+  overflow: auto;
+}
+
+/* Status Bar for the Time Indicator and other options */
+.main-indicator-screen {
+  position: relative;
+  top: 10px;
+  overflow: none;
+}
+/*
+.main-indicator-screen-left {
+  position: absolute;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.main-indicator-screen-right {
+  position: relative;
+  text-align: right;
+}
+
+*/
