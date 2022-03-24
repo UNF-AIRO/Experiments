@@ -2,13 +2,12 @@
 
 class mainMenu {
         const INCLUDE_USER_INTERFACES = "
-                                        <link href='stylesheet' href='src/FOIL-UI-Framework-Library/FOIL-UI.css'>
+                                        <link rel='stylesheet' href='src/FOIL-UI-Framework-Library/FOIL-UI.css'>
                                         ";
 
 
 
         const SUB_HEADER_CONTENTS = "
-                                        <link rel='stylesheet' href='src/FOIL-UI-Framework-Library/FOIL-UI.css'>
                                         <div class='FOIL-Font-Styles--sans-serif'>
                                         <div class='FOIL-Navigation-Bar'>
                                        	<h1> Menu </h1>
