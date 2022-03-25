@@ -3,6 +3,7 @@
 class mainMenu {
         const INCLUDE_USER_INTERFACES = "
                                         <link rel='stylesheet' href='src/FOIL-UI-Framework-Library/FOIL-UI.css'>
+                                        <link rel='stylesheet' href='src/config.css'>
                                         ";
 
 
@@ -12,8 +13,8 @@ class mainMenu {
                                         <div class='FOIL-Navigation-Bar'>
                                        	<h1> Menu </h1>
                                         </div>
-                                        <a href='shutdown.php' class='FOIL-Button color-is-red'>SHUTDOWN </a>
-                                        <a href='restart.php' class='FOIL-Button color-is-red'>RESTART</a>
+                                        <a href='shutdown.php' class='FOIL-Button'>SHUTDOWN </a>
+                                        <a href='restart.php' class='FOIL-Button'>RESTART</a>
                                         </div>
                                     ";
 

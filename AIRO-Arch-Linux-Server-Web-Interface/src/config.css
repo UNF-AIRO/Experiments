@@ -1,1 +1,13 @@
-/* :-) */
+@import url("./FOIL-UI-Framework-Library/FOIL-UI.css");
+
+body{
+        background-color:black;
+        color:white;
+
+}
+
+.FOIL-Button{
+        background-color:transparent !important;
+        padding:16px 32px;
+        border-style:dotted;
+}
